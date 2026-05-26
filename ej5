@@ -1,0 +1,21 @@
+/*5. Dadas la estatura de 10 alumnos de un curso. Determinar la cantidad de alumnos que miden menos de 1.40m.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    float estatura;
+    const float altRef = 1.4
+    int i, cont=0;
+    for(i=1;i<=10;i++){
+        printf("Ingresar la altura (%d): ", i);
+        scanf("%f", &estatura);
+        if(estatura<altRef)
+            cont++;
+    }
+    printf("Hay %d alumnos que miden menos de 1.40", cont);
+    printf("\n");
+    system("pause");
+    return 0;
+}
