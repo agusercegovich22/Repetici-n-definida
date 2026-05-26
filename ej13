@@ -1,0 +1,22 @@
+/*13. Ingresar 10 valores enteros con signo e informar cuál es el mínimo y su ubicación dentro del conjunto, comenzando
+por 1.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int valor, i, menor, posicion;
+    for(i=1;i<=10;i++){
+        printf("Ingresar el numero (%d)", i);//Si pongo el primero fuera del if me ahorro la pregunta i==1 y agilizo el procesamiento
+        scanf("%d", &valor);
+        if(i==1 valor<menor){
+            menor=valor;
+            posicion = i;
+        }
+    }
+    printf("El menor es: %d y su posicion es %d", menor, posicion);
+    printf("\n");
+    system("pause");
+    return 0;
+}
