@@ -1,0 +1,26 @@
+/*3. Ingresar los extremos de un intervalo cerrado;
+ a continuación ingresar 15 valores e informar cuántos pertenecen a
+ese intervalo*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    int i, pertenece = 0;
+    float li, ls, num;
+    printf("Ingresar el limite inferior de un intervalo cerrado: ");
+    scanf("%f", &li);
+    printf("Ingresar el limite superior de un intervalo cerrado: ");
+    scanf("%f", &ls);
+    for(i=1;i<=15;i++){
+        printf("Igresar numero %d: ", i);
+        scanf("%f", &num);
+        if(num>=li && num<=ls)
+            pertenece++;
+    }
+    printf("La cantidad de numeros ingresados que pertenecen al intervalo[%.2f, %.2f] fue: %d", li, ls, pertenece);
+    printf("\n");
+    system("pause");
+    return 0;
+}
