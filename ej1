@@ -1,0 +1,20 @@
+/*1. Ingresar 10 números enteros. Mostrar la suma y el promedio.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    int num, suma, i;
+    printf("Ingresar 10 numeros enteros, para calcular la suma y el promedio\n");
+    for(i=1;i<=10;i++){
+        printf("Igresar numero %d: ", i);
+        scanf("%d", &num);
+        suma+=num;
+        printf("\t%d\n", suma);
+    }
+    printf("La suma de los 10 numeros ingresados es: %d y su promedio %.2f", suma, suma/10.0);
+    printf("\n");
+    system("pause");
+    return 0;
+}
