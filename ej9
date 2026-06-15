@@ -1,0 +1,38 @@
+/*9. Ingresar 18 valores de temperatura distintos de cero. Se pide determinar e informar cuantas ternas (tres valores
+seguidos) de valores positivos y cuantas de negativos hay.*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    int i, tp=0, ttp=0, tn=0, ttn=0;
+    float num;
+    printf("Ingresar 18 valores de temperatura distintos de cero\n\n");
+    for(i=1;i<=18;i++){
+        printf("Ingresar un valor de temperatura(%d): ", i);
+        scanf("%f", &num);
+        if(num>0){
+            tp++;
+            tn=0;
+            if(tp==3){
+                tp=0;
+                ttp++;
+            }
+        }else if(num<0){
+            tp=0;
+            tn++;
+            if(tn==3){
+                tn=0;
+                ttn++;
+            }
+        }else{
+            tp=0;
+            tn=0;
+        }
+    }
+    printf("El numero de ternas positivas es: %d, y el de ternas negativas es: %d", ttp, ttn);
+    printf("\n");
+    system("pause");
+    return 0;
+}
