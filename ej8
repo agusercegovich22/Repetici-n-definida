@@ -1,0 +1,25 @@
+/*8. Ingresar un número N y un exponente E ambos enteros. Mostrar la potencia E del número*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    int N, E, i;
+    float pot=1;
+    printf("Ingresar un numero entero para ser la base de una potencia: ");
+    scanf("%d", &N);
+    printf("Ingresar un numero entero para ser el exponente de una potencia: ");
+    scanf("%d", &E);
+    if(E<0){
+        for(i=-1;i>=E;i--)
+             pot*=N;
+        pot=1/pot;
+    }else if(E>0)
+        for(i=1;i<=E;i++)
+            pot*=N;
+    printf("La potencia es: %f", pot);
+    printf("\n");
+    system("pause");
+    return 0;
+}
