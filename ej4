@@ -1,0 +1,29 @@
+/*4. Ingresar 20 números naturales, determinar e informar:
+a. El promedio de los valores múltiplos de 3
+b. La cantidad de valores múltiplos de 5
+c. La sumatoria de los valores que se ingresan en orden par. */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    int num, i, m3, m5, par=0;
+    printf("Ingresar 20 numeros naturales:\n\n");
+    for(i=1;i<=20;i++){
+        printf("Igresar numero %d: ", i);
+        scanf("%d", &num);
+        if(num%3==0)
+            m3++;
+        if(num%5==0)
+            m5++;
+        if(num%2==0)
+            par+=num;
+    }
+    printf("\nEl promedio de los valores multiplos de 3 es: %.3f\n", m3/20.0);
+    printf("La cantidad de valores multiplos de 5 es: %d\n", m5);
+    printf("La sumatoria de los valores que se ingresan en orden par es: %d", par);
+    printf("\n");
+    system("pause");
+    return 0;
+}
