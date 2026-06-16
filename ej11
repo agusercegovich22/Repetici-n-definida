@@ -1,0 +1,30 @@
+/*11. Realizar un programa que:
+a.
+Muestre todos los números primos entre 1 y 100. (Un nro. es primo cuando es divisible solamente por 1 y
+por sí mismo)
+b. Contar y mostrar la cantidad de primos encontrados. */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(){
+    int n, i, primo;
+    printf("Numeros primos entre 1 y 100:\n");
+    for(n=1;n<=100;n++){
+        primo=1;
+        if(n<2)
+            primo=0;
+        else if(n%2==0 && n!=2)
+            primo=0;
+        else
+            for(i=3;i<=n/2;i+=2)
+                if(n%i==0)
+                    primo=0;
+        if(primo)
+          printf("%2d\t", n);
+    }
+    printf("\n");
+    system("pause");
+    return 0;
+}
